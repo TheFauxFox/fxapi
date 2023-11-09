@@ -1,0 +1,28 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "paw.faux.fx.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "AbstractBlockStateMixin",
+    "ClientConnectionAccessor",
+    "ClientConnectionMixin",
+    "PlayerEntityMixin",
+    "ServerMetadataPacketMixin",
+    "WorldMixin"
+  ],
+  "client": [
+    "ClientPlayerEntityMixin",
+    "ClientPlayerInteractionManagerMixin",
+    "GameRendererMixin",
+    "LightmapTextureManagerMixin",
+    "MinecraftClientMixin",
+    "MouseMixin",
+    "SubtitlesHudMixin",
+    "TitleScreenMixin",
+    "WorldRendererMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
