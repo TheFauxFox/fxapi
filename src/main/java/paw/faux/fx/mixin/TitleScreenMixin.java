@@ -12,6 +12,9 @@ import paw.faux.fx.events.EventClientInit;
 public class TitleScreenMixin {
     @Inject(method = "init", at = @At("HEAD"))
     public void onInit(CallbackInfo ci) {
-        Fx.EVENT_BUS.post(new EventClientInit());
+        if (!Fx.Attributes.Mod.init) {
+            Fx.EVENT_BUS.post(new EventClientInit());
+            Fx.Attributes.Mod.init = true;
+        }
     }
 }

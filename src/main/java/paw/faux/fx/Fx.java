@@ -22,6 +22,7 @@ public class Fx implements ModInitializer {
             public static float ReachDistance = 4.5f;
         }
         public static class Mod {
+            public static boolean init = false;
             public static String Prefix = "";
         }
     }
