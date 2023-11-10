@@ -25,7 +25,10 @@ jobs:
       - name: 'Setup Gradle & build'
         uses: gradle/gradle-build-action@v2
         with:
-          arguments: build
+          cache-read-only: false
+          arguments: |
+            build
+            --no-daemon
 
       - name: 'Get mod name'
         id: mod_name
