@@ -44,7 +44,7 @@ public class MinecraftClientMixin {
 
 	@Inject(method = "doAttack", at = @At("HEAD"), cancellable = true)
 	public void onDoAttackPre(CallbackInfoReturnable<Boolean> cir) {
-		if (Fx.EVENT_BUS.post(new EventAttack.PRE()).isCancelled()) cir.setReturnValue(true);
+		if (Fx.EVENT_BUS.post(new EventAttack.PRE()).isCancelled()) cir.setReturnValue(false);
 	}
 
 	@Inject(method = "doAttack", at = @At("RETURN"))
