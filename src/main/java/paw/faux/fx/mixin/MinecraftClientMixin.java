@@ -57,7 +57,7 @@ public class MinecraftClientMixin {
 		if (Fx.EVENT_BUS.post(new EventItemUse.PRE()).isCancelled()) ci.cancel();
 	}
 
-	@Inject(method = "doItemUse", at = @At("HEAD"))
+	@Inject(method = "doItemUse", at = @At("TAIL"))
 	private void onDoItemUsePost(CallbackInfo ci) {
 		Fx.EVENT_BUS.post(new EventItemUse.POST());
 	}
