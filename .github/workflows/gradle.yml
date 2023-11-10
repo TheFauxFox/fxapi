@@ -35,4 +35,4 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           name: 'FxAPI v${{steps.mod_name.outputs.VERSION}}'
-          files: 'build/libs/FxAPI-${{steps.mod_name.outputs.VERSION}}.jar'
+          files: 'build/libs/fxapi-${{steps.mod_name.outputs.VERSION}}.jar'
