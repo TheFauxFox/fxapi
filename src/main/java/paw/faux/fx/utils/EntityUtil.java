@@ -21,7 +21,7 @@ public class EntityUtil {
         return e.getType().getDimensions().getBoxAt(e.getPos());
     }
 
-    public List<LivingEntity> getLivingEntities(double distance) {
+    public static List<LivingEntity> getLivingEntities(double distance) {
         List<LivingEntity> target = new ArrayList<>();
         if (MinecraftClient.getInstance().player == null || MinecraftClient.getInstance().world == null) return target;
         final double rangeSq = Math.pow(distance, 2.0);
