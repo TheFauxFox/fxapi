@@ -31,7 +31,7 @@ public class NumberUtil {
     }
 
     public static float lerp(float delta, float start, float end) {
-        return start + delta * (end - start + 180) % 360 - 180;
+        return start + delta * ((end - start + 180) % 360 - 180);
     }
 
     public static Vec3d movementInputToVelocity(Vec3d movementInput, float speed, float yaw) {
