@@ -3,6 +3,7 @@ package paw.faux.fx.utils;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.text.Text;
 
+import org.apache.logging.log4j.message.FormattedMessage;
 import java.text.MessageFormat;
 import java.util.ArrayList;
 import java.util.List;
@@ -33,7 +34,7 @@ public class StringUtil {
     }
 
     public static String format(String s, Object ...args) {
-        return MessageFormat.format(s, args);
+        return new FormattedMessage(s, args).getFormattedMessage();
     }
 
     public static Text formatText(String s, Object ...args) {
